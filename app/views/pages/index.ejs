@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitura de duas notas de um aluno</title>
+</head>
+
+<body>
+  <main>
+    <h1>Leitura de duas notas de um aluno</h1>
+    <form action="/media" method="post">
+
+      <label for="inota1">Nota 1:</label>
+      <input type="number" name="nota1" id="inota-1" value="<%= valores.primeiraNota %>"
+        placeholder="Digite a primeira nota:" />.
+
+      <label for="inota2">Nota 2:</label>
+      <input type="number" name="nota2" id="inota-2" value="<%= valores.segundaNota %>"
+        placeholder="Digite a segunda nota:" />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <section>
+      <% if (retorno) { %>
+        <h3>Temos dados de retorno</h3>
+
+        <p>Nota 1: <%= retorno.primeiraNota %>
+        </p>
+
+        <p>Nota 2: <%= retorno.segundaNota %>
+        </p>
+
+        <p>Média: <%= retorno.media %>
+        </p>
+
+        <p>Conceito: <%= retorno.conceito %>
+        </p>
+
+        <% } else { %>
+          <h3>Digite as notas!</h3>
+          <% } %>
+    </section>
+  </main>
+</body>
+
+</html>
