@@ -1,2 +1,1 @@
-Para salvar as dependências, use:
-npm i
+Para instalar as dependências, utilize npm i --save
